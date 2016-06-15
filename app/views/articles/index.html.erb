@@ -1,0 +1,24 @@
+<h1>My Rotations</h1>
+
+<%= link_to 'Create new rotation', new_article_path %>
+<p></p> <!-- added by ray -->
+
+<table>
+	<tr>
+		<th>Rotation Title</th>
+		<th>Description</th>
+		<th colspan="2"></th>
+	</tr>
+	
+	<% @articles.each do |article| %>
+		<tr>
+			<td><%= article.title %></td>
+			<td><%= article.text %></td>
+			<td><%= link_to 'Show Members', article_path(article) %> | </td>
+			<td><%= link_to 'Edit Rotation', edit_article_path(article) %> | </td>
+			<td><%= link_to 'Delete Rotation', article_path(article),
+				    method: :delete,
+					data: { confirm: 'Permanently delete this Rotation?' } %></td>
+		</tr>
+	<% end %>
+</table>

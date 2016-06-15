@@ -1,0 +1,15 @@
+<p>
+	<strong>Member Name:</strong>
+	<%= comment.commenter %>
+</p>
+
+<p>
+	<strong>Date Joined Rotation:</strong>
+	<%= comment.body %>
+</p>
+
+<p>
+	<%= link_to 'Remove Member', [comment.article, comment],
+	             method: :delete,
+				 data: { confirm: 'Permanently remove this member from Rotation?'} %>
+</p>
