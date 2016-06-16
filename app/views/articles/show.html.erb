@@ -1,20 +1,30 @@
 <h2>Rotation</h2>
 
-<p>
-	<strong>Rotation Title:</strong>
-	<%= @article.title %>
-</p>
+<ul>
+	<li>
+		<strong>Rotation Title:</strong>
+		<%= @article.title %>
+	</li>
 
-<p>
-	<strong>Description:</strong>
-	<%= @article.text %>
-</p>
+	<li>
+		<strong>Description:</strong>
+		<%= @article.text %>
+	</li>
+</ul>
 
-<h3>Rotation Members</h3>
-<%= render @article.comments %>
+<h2>Rotation Members</h2>
+<table>
+	<tr>
+		<th>Rotation Member</th>
+		<th>Date Joined Rotation</th>
+		<th colspan="2"></th>
+	</tr>
+	<%= render @article.comments %>
+<table>
 
 <h2>Add a member to Rotation:</h2>
 <%= render 'comments/form' %>
 
+<p></p>
 <%= link_to 'Edit Rotation', edit_article_path(@article) %> | 
 <%= link_to 'Back to List of Rotations', articles_path %>

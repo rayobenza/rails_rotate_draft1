@@ -1,13 +1,16 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
-	<p>
-		<%= f.label :commenter, "Member Name" %><br>
-		<%= f.text_field :commenter %>
-	</p>
-	<p>
-		<%= f.label :body, "Date Joined Rotation" %><br>
-		<%= f.text_field :body %>
-	</p>
-	<p>
-		<%= f.submit "Add Member" %>
-	</p>
+<table>
+	<tr>
+		<th><%= f.label :commenter, "Member Name" %></th>
+		<th><%= f.label :body, "Date Joined Rotation" %></th>
+	</tr>
+
+	<tr>
+		<td><%= f.text_field :commenter %></td>
+		<td><%= f.text_field :body %></td>
+		<td><%= f.submit "Add Member" %></td>
+	</tr>
+</table>
 <% end %>
+
+
