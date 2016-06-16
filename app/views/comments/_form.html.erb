@@ -3,11 +3,13 @@
 	<tr>
 		<th><%= f.label :commenter, "Member Name" %></th>
 		<th><%= f.label :body, "Date Joined Rotation" %></th>
+		<th><%= f.label :tokenholder, "Set to My Turn" %></th>
 	</tr>
 
 	<tr>
 		<td><%= f.text_field :commenter %></td>
 		<td><%= f.text_field :body %></td>
+		<td><%= f.check_box :tokenholder, {}, true, false %></td>
 		<td><%= f.submit "Add Member" %></td>
 	</tr>
 </table>

@@ -1,6 +1,13 @@
 <tr>
 	<td><%= comment.commenter %></td>
 	<td><%= comment.body %></td>
+	<td>
+		<% if comment.tokenholder == true %>
+			<p>My Turn</p>
+		<% else %> 
+			<p>Nope</p>
+		<% end %>
+	</td>
 	<td><%= link_to 'Remove Member', [comment.article, comment],
 	             method: :delete,
 				 data: { confirm: 'Permanently remove this member from Rotation?'} %></td>
