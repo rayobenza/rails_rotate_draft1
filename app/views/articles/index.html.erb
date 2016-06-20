@@ -1,3 +1,5 @@
+<div class = "rfont">
+<h1><%= image_tag('logo.png') %> Rotate!</h1>
 <h1>My Rotations</h1>
 
 <%= link_to 'Create new rotation', new_article_path %>
@@ -9,7 +11,7 @@
 		<th>Description</th>
 		<th colspan="2"></th>
 	</tr>
-	
+
 	<% @articles.each do |article| %>
 		<tr>
 			<td><%= article.title %></td>
@@ -22,3 +24,4 @@
 		</tr>
 	<% end %>
 </table>
+</div>
